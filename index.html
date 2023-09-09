@@ -2,40 +2,83 @@
 <html lang="en">
     <head>
         <title>Arsh's Library</title>
-        <link rel="icon" type="image/x-icon" href="">
+        <link rel="icon" type="image/x-icon" href="/Users/harsimrandhillon/Documents/myBookSpace/images/favicon.ico">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
+
+        <!-- Google Fonts -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Tangerine">
+        <script>"https://use.fontawesome.com/4190456980.js"</script>
         <style>
-        #myHeader {
-            background-color: white;
-            font-family: 'Tangerine', serif;
-            color: black;
-            text-align: left;
-            padding: 40px;
-            font-size: 50px;
-            height: auto;
-            width: 100%;
+        #header {
+            overflow: hidden;
+            background: white;
+            box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.092);
+            cursor:default;
+            
            
         }
-        .header-icon{
-            bottom: 0;
-            left: 0;
-            position: absolute;
-            right: 0;
-            top: 0;
-            width:50px;
-            height:50px;
+        #header a {
+            float: left;
+            color: black;
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 18px; 
+            line-height: 25px;
+            border-radius: 4px;
         }
+
+        #header .logo {
+            font-size: 32px;
+            margin: 0;
+            padding: 0;
+            line-height: 1;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            align-items: center;
+        }
+        #header h1{
+            margin-left: 5%;
+            align-items: center;
+            font-family: "Trirong", serif;
+            font-weight: none;
+        }
+        #header .logo a {
+            color: #d2e6ea;
+        }
+
+        #header .logo img {
+            margin-left: 0;
+            max-height: 100px;
+        }
+
+        body{
+            padding-right:10px;
+            font-family: "Trirong", serif;
+            margin: 0;
+            min-height: 100%;
+            background-blend-mode:hard-light;
+            background-repeat: repeat-y;
+            background-position: center;
+            background-size: 100%;
+            background-color: rgb(231, 241, 255);  
+            cursor:default;
+        }
+        
+       
         </style>
     </head>
 
-    <body>
-    <body style="background-color:rgb(231, 241, 255);">
-        <header id="myHeader" class="fixed-header">
-            <a href="index.html" class="header-icon"><img src="" alt=""></a>
-            <h3>Arsh's Library</h3>
+    <body id="body">
+        <!-- ======= Header ======= -->
+        <header id="header" class="fixed-top">
+            <div class="navigationContainer">
+                <a href="index.html" class="logo"><img src="../myBookSpace/images/headerBook.jpg" alt="logo"></a>
+                <h1>Arsh's Library</h1>
+            </div>
         </header>
     </body>
 </html>
