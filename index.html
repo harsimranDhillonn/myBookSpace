@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <title>Arsh's Library</title>
-        <link rel="icon" type="image/x-icon" href="/Users/harsimrandhillon/Documents/myBookSpace/images/favicon.ico">
+        <link rel="icon" type="image/x-icon" href="../myBookSpace/images/favicon.ico">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
 
@@ -10,52 +10,38 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Tangerine">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
         <script>"https://use.fontawesome.com/4190456980.js"</script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script type="module" src = "main.js"></script>
+        
         <style>
         #header {
-            overflow: hidden;
             background: white;
             box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.092);
             cursor:default;
-            justify-content: space-between; /* Align items horizontally */
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 25px;
+            
         }
-        #header a {
-            float: left;
-            color: black;
-            text-align: center;
-            padding: 12px;
+        .logo img{
+            width:100px;
+            margin-right: 10px;
+            
+        }
+        .logo a{
+            display: flex;
+            align-items: center;
+            font-size:25px;
             text-decoration: none;
-            font-size: 18px; 
-            line-height: 25px;
-            border-radius: 4px;
-        }
-
-        #header .logo {
-            font-size: 32px;
-            margin: 0;
-            padding: 0;
-            line-height: 1;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            align-items: center;
-        }
-        #header h1{
-            margin-left: 5%;
-            align-items: center;
+            color: black;
             font-family: "Trirong", serif;
-            font-weight: none;
-        }
-        #header .logo a {
-            color: #d2e6ea;
-        }
-
-        #header .logo img {
-            margin-left: 0;
-            max-height: 100px;
         }
 
         body{
-            padding-right:10px;
             font-family: "Trirong", serif;
             margin: 0;
             min-height: 100%;
@@ -66,6 +52,37 @@
             background-color: rgb(231, 241, 255);  
             cursor:default;
         }
+        #search_bar  i,input {
+            color:#336bcb;
+            border:#336bcb;
+            padding-right: 5px;
+        }
+        #search_bar i{
+            padding-left:5px;
+
+        }
+        #search_bar {
+            border-color:#336bcb;
+            display: flex; 
+            align-items: center; 
+        }
+
+        #search_bar input {
+            color:#336bcb;
+            border: 1px solid #336bcb;
+            border:10px;
+            padding:5px 5px;
+            border-radius:10px;
+            background-color: #cedae9;
+            flex-grow: 1;
+            min-width: 222px; 
+        } 
+
+        #search_bar input:hover {
+            background-color:#cedae9;
+            border-color: #cedae9;
+            color: #336bcb;
+        }
         
        
         </style>
@@ -74,9 +91,28 @@
     <body id="body">
         <!-- ======= Header ======= -->
         <header id="header" class="fixed-top">
-            <div class="navigationContainer">
-                <a href="index.html" class="logo"><img src="../myBookSpace/images/headerBook.jpg" alt="logo"></a>
-                <h1>Arsh's Library</h1>
+            <!--Logo-->
+            <div class="logo">
+                <a href="index.html"><img src="/images/headerBook.jpg" alt="logo">Arsh's Library</a>
+            </div>
+            <!--Search bar-->
+            <div id="search_bar">
+                <input id="search_value" type = "text" placeholder="Search by Book Title, Author, or ISBN">
+                <a href = "#">
+                  <i class = "fa fa-search"></i>
+                </a>
+                <!-- ======= Book Info from Search ======= -->
+                <div class="list-book search">
+                    <div class="row1">
+                        <div class="row1col1" id="book1"></div>
+                        <div class="row1col2" id="book2"></div>
+                        <div class="row1col3" id="book3"></div>
+                    </div>
+                    <div class="row2">
+                        <div class="row2col1" id="book4"></div>
+                        <div class="row2col2" id="book5"></div>
+                    </div>
+                </div>
             </div>
         </header>
     </body>
