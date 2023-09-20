@@ -13,6 +13,7 @@ $('#search_value').change(function(){
   .then((books) => {
     console.log('Books:', books);
     // Process and display the book information here
+    
     printVolumeInfo(books);
   })
   .catch((error) => {
@@ -20,9 +21,11 @@ $('#search_value').change(function(){
   });
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
 } )
-function printVolumeInfo(allBooks ){
+
+
+function printVolumeInfo(allBooks){
   //show results for the 1st five books, by default google books return 10
-  for(i=0; i<5; i++){
+  for(let i=0; i<5; i++){
     var booki= 'book'+(i+1)
 
     //create HTML elements for the book display
@@ -49,14 +52,28 @@ function printVolumeInfo(allBooks ){
     document.getElementById(booki).appendChild(description)
 
     //populate the book elements
+    //thumbnail image
     var img= document.createElement('img')
     img.src=allBooks.items[i].volumeInfo.imageLinks.smallThumbnail
     document.getElementsByClassName('book thumbnail')[i].appendChild(img)
-
+    //title
+    var title= document.createElement('h1')
+    title.innerHTML= allBooks.items[i].volumeInfo.title
+    document.getElementsByClassName('book title')[i].appendChild(title)
+    //author
+    var author= document.createElement('p')
+    author.innerHTML= 'By: '+ allBooks.items[i].volumeInfo.authors[0]
+    document.getElementsByClassName('book author')[i].appendChild(author)
+    //pages
+    var pages= document.createElement('p')
+    pages.innerHTML= "Pages: "+ allBooks.items[i].volumeInfo.pageCount
+    document.getElementsByClassName("book pages")[i].appendChild(pages)
+    //description
+    var description= document.createElement('p')
+    description.innerHTML= "Description"+allBooks.items[i].volumeInfo.description
+    document.getElementsByClassName("book description")[i].appendChild(pages)
 
   }
-
-
 }
 
 // Function to fetch book information from the Google Books API
@@ -71,7 +88,7 @@ const getBookInfo = async (query) => {
     }
 
     const data = await response.json();
-    return data.items; // This returns an array of books that match the query
+    return data; // This returns an array of books that match the query
   } catch (error) {
     console.error('Error fetching book information:', error);
     return [];
