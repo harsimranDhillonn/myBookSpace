@@ -13,7 +13,6 @@ $('#search_value').change(function(){
   .then((books) => {
     console.log('Books:', books);
     // Process and display the book information here
-    
     printVolumeInfo(books);
   })
   .catch((error) => {
@@ -24,6 +23,7 @@ $('#search_value').change(function(){
 
 
 function printVolumeInfo(allBooks){
+  clearBookDivs();
   //show results for the 1st five books, by default google books return 10
   for(let i=0; i<5; i++){
     var booki= 'book'+(i+1)
@@ -93,5 +93,15 @@ const getBookInfo = async (query) => {
     console.error('Error fetching book information:', error);
     return [];
   }
-};
+}
+// Function to clear the content of book divs
+function clearBookDivs() {
+  // clear content of each book
+  for (let i = 1; i <= 5; i++) {
+    const bookDiv = document.getElementById('book' + i);
+    if (bookDiv) {
+      bookDiv.innerHTML = '';
+    }
+  }
+}
 
