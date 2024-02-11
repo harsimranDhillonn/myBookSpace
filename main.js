@@ -21,59 +21,92 @@ $('#search_value').change(function(){
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
 } )
 
-
 function printVolumeInfo(allBooks){
-  clearBookDivs();
-  //show results for the 1st five books, by default google books return 10
-  for(let i=0; i<5; i++){
-    var booki= 'book'+(i+1)
+    //clearBookDivs();
 
-    //create HTML elements for the book display
+    //show results for the 1st six books, by default google books return 10
+    for(let i=0; i<6; i++){
 
-    //element for the thumbnail of the book
-    var thumbnail= document.createElement('div')
-    thumbnail.className= "book thumbnail"
-    document.getElementById(booki).appendChild(thumbnail)
-    //element for the Title of the book
-    var title= document.createElement('div')
-    title.className= "book title"
-    document.getElementById(booki).appendChild(title)
-    //element for the author of the book
-    var author= document.createElement('div')
-    author.className="book author"
-    document.getElementById(booki).appendChild(author)
-    //element for the number of pages in the book
-    var pages= document.createElement('div')
-    pages.className="book pages"
-    document.getElementById(booki).appendChild(pages)
-    //element for the description of the book
-    var description= document.createElement('div')
-    description.className="book description"
-    document.getElementById(booki).appendChild(description)
+      // Create article element
+      var article = document.createElement('article');
+      article.classList.add('material-card');
 
-    //populate the book elements
-    //thumbnail image
-    var img= document.createElement('img')
-    img.src=allBooks.items[i].volumeInfo.imageLinks.smallThumbnail
-    document.getElementsByClassName('book thumbnail')[i].appendChild(img)
-    //title
-    var title= document.createElement('h1')
-    title.innerHTML= allBooks.items[i].volumeInfo.title
-    document.getElementsByClassName('book title')[i].appendChild(title)
-    //author
-    var author= document.createElement('p')
-    author.innerHTML= 'By: '+ allBooks.items[i].volumeInfo.authors[0]
-    document.getElementsByClassName('book author')[i].appendChild(author)
-    //pages
-    var pages= document.createElement('p')
-    pages.innerHTML= "Pages: "+ allBooks.items[i].volumeInfo.pageCount
-    document.getElementsByClassName("book pages")[i].appendChild(pages)
-    //description
-    var description= document.createElement('p')
-    description.innerHTML= "Description"+allBooks.items[i].volumeInfo.description
-    document.getElementsByClassName("book description")[i].appendChild(pages)
+      // Create h2 element
+      var h2 = document.createElement('h2');
 
-  }
+      // Create span element
+      var span = document.createElement('span');
+      span.textContent =  allBooks.items[i].volumeInfo.title;
+
+      // Create strong element
+      var strong = document.createElement('strong');
+      strong.textContent = 'By: '+allBooks.items[i].volumeInfo.authors[0];
+
+      // Append span and strong to h2
+      h2.appendChild(span);
+      h2.appendChild(strong);
+
+      // Append h2 to article
+      article.appendChild(h2);
+
+      // Create div with class "mc-content"
+      var mcContent = document.createElement('div');
+      mcContent.classList.add('mc-content');
+
+      // Create div with class "img-container"
+      var imgContainer = document.createElement('div');
+      imgContainer.classList.add('img-container');
+
+      // Create img element
+      var img = document.createElement('img');
+      img.src = allBooks.items[i].volumeInfo.imageLinks.smallThumbnail;
+      img.alt = 'Book Cover';
+      img.classList.add('img-responsive');
+
+      // Append img to imgContainer
+      imgContainer.appendChild(img);
+
+      // Create div with class "mc-description"
+      var mcDescription = document.createElement('div');
+      mcDescription.classList.add('mc-description');
+      mcDescription.textContent = allBooks.items[i].volumeInfo.description;
+
+      // Append imgContainer and mcDescription to mcContent
+      mcContent.appendChild(imgContainer);
+      mcContent.appendChild(mcDescription);
+
+      // Append mcContent to article
+      article.appendChild(mcContent);
+
+      // Create a element with class "mc-btn-action"
+      var mcBtnAction = document.createElement('a');
+      mcBtnAction.classList.add('mc-btn-action');
+
+      // Create i element with class "fa fa-bars"
+      var iElement = document.createElement('i');
+      iElement.classList.add('fa', 'fa-bars');
+
+      // Append iElement to mcBtnAction
+      mcBtnAction.appendChild(iElement);
+
+      // Append mcBtnAction to article
+      article.appendChild(mcBtnAction);
+
+      // Create div with class "mc-footer"
+      var mcFooter = document.createElement('div');
+      mcFooter.classList.add('mc-footer');
+
+      // Append mcFooter to article
+      article.appendChild(mcFooter);
+
+      //creaste div with class that holds the article
+      var colmd = document.createElement('div');
+      colmd.classList.add('col-md-4', 'col-sm-6', 'col-xs-12')
+      colmd.appendChild(article)
+
+      //append colmd into div that holds all articles
+      document.getElementsByClassName('row active-with-click')[0].appendChild(colmd)
+    }
 }
 
 // Function to fetch book information from the Google Books API
@@ -96,7 +129,7 @@ const getBookInfo = async (query) => {
 }
 // Function to clear the content of book divs
 function clearBookDivs() {
-  // clear content of each book
+  // Loop through each book div and clear its content
   for (let i = 1; i <= 5; i++) {
     const bookDiv = document.getElementById('book' + i);
     if (bookDiv) {
@@ -104,4 +137,31 @@ function clearBookDivs() {
     }
   }
 }
+$(function() {
+  $('body').on('click', '.material-card > .mc-btn-action', function () {
+      var card = $(this).parent('.material-card');
+      var icon = $(this).children('i');
+    
+
+      if (card.hasClass('mc-active')) {
+          card.removeClass('mc-active');
+
+          window.setTimeout(function() {
+              icon
+                  .removeClass('fa-arrow-left')
+                  .addClass('fa-bars');
+
+          }, 800);
+      } else {
+          card.addClass('mc-active');
+
+          window.setTimeout(function() {
+              icon
+                  .removeClass('fa-bars')
+                  .addClass('fa-arrow-left');
+
+          }, 800);
+      }
+  });
+});
 
