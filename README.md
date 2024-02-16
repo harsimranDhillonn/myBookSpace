@@ -13,5 +13,7 @@ Features to complete:
  - Notes page and its database
  - Favourites pages 
 
+Credit
+- mobirise: Home page template
 
 Author: Harsimran Dhillon
