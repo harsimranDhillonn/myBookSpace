@@ -1,0 +1,89 @@
+
+    .cid-u414BuTy61  .navbar-brand {
+      flex-shrink: 0;
+      align-items: center;
+      margin-right: auto;
+      padding: 10px 0;
+      transition: all 0.3s;
+      word-break: break-word;
+      z-index: 1;
+    }
+    .cid-u414BuTy61  .navbar-brand img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+    .cid-u414BuTy61  .navbar-brand .navbar-caption {
+      line-height: inherit !important;
+    }
+    .cid-u414BuTy61  .navbar-brand .navbar-logo a {
+      outline: none;
+    }
+    .cid-u414BuTy61  .navbar-nav {
+      margin: auto;
+      margin-left: 0;
+      margin-left: auto;
+      margin-right: 15px; 
+      display: flex;
+      align-items: center;
+    }
+    .cid-u414BuTy61 .navbar-nav .nav-item {
+      margin-left: 10px; 
+    }
+    .cid-u414BuTy61  .navbar-nav .nav-item .nav-link {
+      padding: 16px !important;
+      margin: 0 !important;
+      border-radius: 1rem !important;
+      transition: 0.3s all !important;
+    }
+    .cid-u414BuTy61  .navbar-nav .nav-item .nav-link:hover {
+      background-color: rgba(27, 31, 10, 0.06);
+    }
+    
+    @media (min-width: 992px) {
+      .cid-u414BuTy61  .navbar-nav {
+        padding-left: 1.5rem;
+      }
+    }
+    .cid-u414BuTy61  .nav-link {
+      width: fit-content;
+      position: relative;
+    }
+    .cid-u414BuTy61  .navbar-logo {
+      margin: 0 !important;
+    }
+    
+    .cid-u414BuTy61  .navbar-caption {
+      padding-left: 1rem;
+      padding-right: 0.5rem;
+    }
+    
+    .cid-u414BuTy61  .container {
+      display: flex;
+      height: 90px;
+      padding: 0.5rem 0.6rem;
+      flex-wrap: nowrap;
+      background: rgba(255, 255, 255, 0.8) !important;
+      left: 0;
+      right: 0;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: flex-end;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      border-radius: 100vw;
+      margin-top: 1rem;
+      background-color: #ffffff;
+      box-shadow: 0 30px 60px 0 rgba(27, 31, 10, 0.08);
+    }
+    .cid-u414BuTy61  .navbar {
+      min-height: 90px;
+      transition: all 0.3s;
+      border-bottom: 1px solid transparent;
+      background: transparent !important;
+      padding: 0 !important;
+      border: none !important;
+      box-shadow: none !important;
+      border-radius: 0 !important;
+    }

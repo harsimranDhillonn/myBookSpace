@@ -1,19 +1,40 @@
 
-const apiKey = '';
+const apiKey = 'AIzaSyC7LZBRefKLivJ7XwtFz-h633JT5xg2SkU';
 
 $('#search_value').change(function(){
   
   const content= $('#search_value').val(); //get the query entered in the search bar
   console.log("Content: " + content); //testing purposes
-  document.getElementById("title_div").innerHTML = "Results for '" + content +"'";
-  document.getElementById("search_value").value= ""; //clear out the search bar
+  
+  //document.getElementById("search_value").value= ""; //clear out the search bar
+
+  window.location.href = `search.html?q=${encodeURIComponent(content)}`;
+  /*
+  var h4 = document.createElement('h4');
+  h4.classList.add('mbr-section-subtitle', 'mbr-fonts-style', 'align-center', 'mb-0', 'mt-4', 'display-7');
+  var strong = document.createElement('strong');
+  strong.textContent = content;
+  h4.appendChild = strong;
+  document.getElementById('bookTitle').appendChild= h4;
+  */
+  $(document).ready(function() {
+  document.addEventListener('DOMContentLoaded', function() {
+    const dynamicValueElement = document.getElementById('bookTitle');
+    if (dynamicValueElement) {
+      console.log("element found!")
+        dynamicValueElement.textContent = content;
+    }
+  }),
+  console.log("im through");
+}),
+  
 
   //call function "getBookInfo" to send query out to google books for available books
   getBookInfo(content)
   .then((books) => {
     console.log('Books:', books);
     // Process and display the book information here
-    printVolumeInfo(books);
+    //printVolumeInfo(books);
   })
   .catch((error) => {
     console.error('Error:', error);

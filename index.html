@@ -1,1365 +1,401 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Arsh's Library</title>
-        <link rel="icon" type="image/x-icon" href="../myBookSpace/images/favicon.ico">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="utf-8">
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise AI v0.01, ai.mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/logo5.png" type="image/x-icon">
+  <meta name="description" content="Explore a world of books with My Library. Search, favorite, and organize your reading list with ease.">
 
-        <!-- Google Fonts -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Tangerine">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <title>My Library Books</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css"> 
+  <link rel="stylesheet" href="assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap"></noscript>
+  <link rel="preload" as="style" href="assets/mobirise/css/additional.css"><link rel="stylesheet" href="assets/mobirise/css/additional.css" type="text/css">
 
-        
-        <!---Java scripts-->
-        <script>"https://use.fontawesome.com/4190456980.js"</script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script type="module" src = "main.js"></script>
+  <!--js-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="module" src = "main.js"></script>
 
-        <!--Bootstrap-->
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-        <script src="/js/bootstrap.js"></script>
+  <!--Page css links-->
+  <link rel="stylesheet" href="navigation.css">
 
-        
-        <style>
-        #header {
-            background: white;
-            box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.092);
-            cursor:default;
-            display:flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 25px;
-            
-        }
-        .logo img{
-            width:100px;
-            margin-right: 10px;
-            
-        }
-        .logo a{
-            display: flex;
-            align-items: center;
-            font-size:25px;
-            text-decoration: none;
-            color: black;
-            font-family: "Trirong", serif;
-        }
+  <style>:root{ --background: #FAF8FB; --dominant-color: #CDB4DB; --primary-color: #FFAFCC; --secondary-color: #C1CFDE; --success-color: #90EBC1; --danger-color: #EC8F98; --warning-color: #FFDE7C; --info-color: #83E5F8; --background-text: #000000; --dominant-text: #000000; --primary-text: #000000; --secondary-text: #000000; --success-text: #000000; --danger-text: #000000; --warning-text: #000000; --info-text: #000000;}</style>
+</head>
+<body>
+  
+  <!-- Include the navigation bar -->
+  <section class="menu menu2 cid-u414BuTy61" once="menu" id="menu-5-u414BuTy61">
+  </section>
+  <script>
+   $(function() {
+            $(".menu.menu2.cid-u414BuTy61").load("navigation.html");
+        });  
+  </script>
 
-        body{
-            font-family: "Trirong", serif;
-            margin: 0;
-            min-height: 100%;
-            background-blend-mode:hard-light;
-            background-repeat: repeat-y;
-            background-position: center;
-            background-size: 100%;
-            background-color: rgb(231, 241, 255);  
-            cursor:default;
-        }
-        #search_bar  i,input {
-            color:#336bcb;
-            border:#336bcb;
-            padding-right: 5px;
-        }
-        #search_bar i{
-            padding-left:5px;
+<style>
+  .cid-u414BuTG2K {
+    display: flex;
+    background-image: url("assets/images/photo-1491841573634-28140fc7ced7.jpeg");
+  }
+  .cid-u414BuTG2K .mbr-overlay {
+    background-color: #000000;
+    opacity: 0.5;
+  }
+  @media (min-width: 768px) {
+    .cid-u414BuTG2K {
+      align-items: center;
+    }
+    .cid-u414BuTG2K .row {
+      justify-content: center;
+    }
+    .cid-u414BuTG2K .content-wrap {
+      padding: 1rem 3rem;
+    }
+  }
 
-        }
-        #search_bar {
-            border-color:#336bcb;
-            display: flex; 
-            align-items: center; 
-        }
+  .cid-u414BuTG2K .mbr-text,
+  .cid-u414BuTG2K .mbr-section-btn {
+    text-align: center;
+  }
 
-        #search_bar input {
-            color:#336bcb;
-            border: 1px solid #336bcb;
-            border:10px;
-            padding:5px 5px;
-            border-radius:10px;
-            background-color: #cedae9;
-            flex-grow: 1;
-            min-width: 222px; 
-        } 
+  #search_bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
 
-        #search_bar input:hover {
-            background-color:#cedae9;
-            border-color: #cedae9;
-            color: #336bcb;
-        }
-        .material-card {
-            position: relative;
-            width:70%;
-            padding-bottom: calc(80% - 8px);
-            margin-bottom: 6.6em;
-            margin-top: 8em;
-            
-        }
-        .material-card h2 {
-            position: absolute;
-            top: calc(100% - 16px);
-            left: 0;
-            width: 100%;
-            padding: 10px 8px;
-            color: #fff;
-            font-size: 1.0em;
-            line-height: 1.6em;
-            margin: 0;
-            z-index: 10;
-            -webkit-transition: all 0.3s;
-            -moz-transition: all 0.3s;
-            -ms-transition: all 0.3s;
-            -o-transition: all 0.3s;
-            transition: all 0.3s;
-        }
-        .material-card h2 span {
-            display: block;
-        }
-        .material-card h2 strong {
-            font-weight: 400;
-            display: block;
-            font-size: .8em;
-        }
-        .material-card h2:before,
-        .material-card h2:after {
-            content: ' ';
-            position: absolute;
-            left: 0;
-            top: -16px;
-            width: 0;
-            border: 8px solid;
-            -webkit-transition: all 0.3s;
-            -moz-transition: all 0.3s;
-            -ms-transition: all 0.3s;
-            -o-transition: all 0.3s;
-            transition: all 0.3s;
-        }
-        .material-card h2:after {
-            top: auto;
-            bottom: 0;
-        }
-        @media screen and (max-width: 767px) {
-            .material-card.mc-active {
-                padding-bottom: 0;
-                height: auto;
-            }
-        }
-        .material-card.mc-active h2 {
-            top: 0;
-            padding: 10px 16px 10px 90px;
-        }
-        .material-card.mc-active h2:before {
-            top: 0;
-        }
-        .material-card.mc-active h2:after {
-            bottom: -16px;
-        }
-        .material-card .mc-content {
-            position: absolute;
-            right: 0;
-            top: 0;
-            bottom: 16px;
-            left: 16px;
-            -webkit-transition: all 0.3s;
-            -moz-transition: all 0.3s;
-            -ms-transition: all 0.3s;
-            -o-transition: all 0.3s;
-            transition: all 0.3s;
-        }
-        .material-card .mc-btn-action {
-            position: absolute;
-            right: 16px;
-            top: 16px;
-            -webkit-border-radius: 50%;
-            -moz-border-radius: 50%;
-            border-radius: 50%;
-            border: 5px solid;
-            width: 54px;
-            height: 54px;
-            line-height: 44px;
-            text-align: center;
-            color: #fff;
-            cursor: pointer;
-            z-index: 20;
-            -webkit-transition: all 0.3s;
-            -moz-transition: all 0.3s;
-            -ms-transition: all 0.3s;
-            -o-transition: all 0.3s;
-            transition: all 0.3s;
-        }
-        .material-card.mc-active .mc-btn-action {
-            top: 65px;
-        }
-        .material-card .mc-description {
-            position: absolute;
-            top: 100%;
-            right: 30px;
-            left: 30px;
-            bottom: 20px;
-            opacity: 0;
-            overflow:hidden;
-            filter: alpha(opacity=0);
-            -webkit-transition: all 1.2s;
-            -moz-transition: all 1.2s;
-            -ms-transition: all 1.2s;
-            -o-transition: all 1.2s;
-            transition: all 1.2s;
-        }
-        .mc-description:hover{
-            overflow-y:scroll;
+  #search_bar input {
+    color: #090009;
+    border: 1px solid #b07ab2;
+    padding: 10px 20px;
+    border-radius: 100px;
+    background-color: #dbd3da;
+    width: 300px; /* Set the desired width */
+  }
 
-        }
-        .material-card .mc-footer {
-            height: 0;
-            overflow: hidden;
-            -webkit-transition: all 0.3s;
-            -moz-transition: all 0.3s;
-            -ms-transition: all 0.3s;
-            -o-transition: all 0.3s;
-            transition: all 0.3s;
-        }
-        .material-card .mc-footer h4 {
-            position: absolute;
-            top: 200px;
-            left: 30px;
-            padding: 0;
-            margin: 0;
-            font-size: 16px;
-            font-weight: 700;
-            -webkit-transition: all 1.4s;
-            -moz-transition: all 1.4s;
-            -ms-transition: all 1.4s;
-            -o-transition: all 1.4s;
-            transition: all 1.4s;
-        }
-        .material-card .mc-footer a {
-            display: block;
-            float: left;
-            position: relative;
-            width: 30px;
-            height: 30px;
-            margin-left: 5px;
-            margin-bottom: 15px;
-            font-size: 28px;
-            color: #fff;
-            line-height: 52px;
-            text-decoration: none;
-            top: 200px;
-        }
-        .material-card .mc-footer a:nth-child(1) {
-            -webkit-transition: all 0.5s;
-            -moz-transition: all 0.5s;
-            -ms-transition: all 0.5s;
-            -o-transition: all 0.5s;
-            transition: all 0.5s;
-        }
-        .material-card .mc-footer a:nth-child(2) {
-            -webkit-transition: all 0.6s;
-            -moz-transition: all 0.6s;
-            -ms-transition: all 0.6s;
-            -o-transition: all 0.6s;
-            transition: all 0.6s;
-        }
-        .material-card .mc-footer a:nth-child(3) {
-            -webkit-transition: all 0.7s;
-            -moz-transition: all 0.7s;
-            -ms-transition: all 0.7s;
-            -o-transition: all 0.7s;
-            transition: all 0.7s;
-        }
-        .material-card .mc-footer a:nth-child(4) {
-            -webkit-transition: all 0.8s;
-            -moz-transition: all 0.8s;
-            -ms-transition: all 0.8s;
-            -o-transition: all 0.8s;
-            transition: all 0.8s;
-        }
-        .material-card .mc-footer a:nth-child(5) {
-            -webkit-transition: all 0.9s;
-            -moz-transition: all 0.9s;
-            -ms-transition: all 0.9s;
-            -o-transition: all 0.9s;
-            transition: all 0.9s;
-        }
-        .material-card .img-container {
-            overflow: hidden;
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 3;
-            -webkit-transition: all 0.3s;
-            -moz-transition: all 0.3s;
-            -ms-transition: all 0.3s;
-            -o-transition: all 0.3s;
-            transition: all 0.3s;
-        }
-        .material-card.mc-active .img-container {
-            -webkit-border-radius: 50%;
-            -moz-border-radius: 50%;
-            border-radius: 50%;
-            left: 0;
-            top: 12px;
-            width: 60px;
-            height: 60px;
-            z-index: 20;
-        }
-        .img-container img {
-            object-fit: fill; /* or fill */
-            width: 100%;
-            height: 100%;
-            /* Other styles */
-        }
+  #search_bar input:hover {
+    background-color: #e8d0ed;
+    border-color: #e8cbea;
+    color: #050005;
+  }
+</style>
 
-        .material-card.mc-active .mc-content {
-            padding-top: 5.6em;
-        }
-        @media screen and (max-width: 767px) {
-            .material-card.mc-active .mc-content {
-                position: relative;
-                margin-right: 16px;
-            }
-        }
-        .material-card.mc-active .mc-description {
-            top: 50px;
-            padding-top: 4.5em;
-            opacity: 1;
-            filter: alpha(opacity=100);
-        }
-        @media screen and (max-width: 767px) {
-            .material-card.mc-active .mc-description {
-                position: relative;
-                top: auto;
-                right: auto;
-                left: auto;
-                padding: 50px 30px 70px 30px;
-                bottom: 0;
-            }
-        }
-        .material-card.mc-active .mc-footer {
-            overflow: visible;
-            position: absolute;
-            top: calc(100% - 16px);
-            left: 16px;
-            right: 0;
-            height: 82px;
-            padding-top: 15px;
-            padding-left: 25px;
-        }
-        .material-card.mc-active .mc-footer a {
-            top: 0;
-        }
-        .material-card.mc-active .mc-footer h4 {
-            top: -32px;
-        }
-        .material-card h2 {
-            background-color: #f44336;
-        }
-        .material-card h2:after {
-            border-top-color: #f44336;
-            border-right-color: #f44336;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-        }
-        .material-card h2:before {
-            border-top-color: transparent;
-            border-right-color: #b71c1c;
-            border-bottom-color: #b71c1c;
-            border-left-color: transparent;
-        }
-        .material-card.mc-active h2:before {
-            border-top-color: transparent;
-            border-right-color: #f44336;
-            border-bottom-color: #f44336;
-            border-left-color: transparent;
-        }
-        .material-card.mc-active h2:after {
-            border-top-color: #b71c1c;
-            border-right-color: #b71c1c;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-        }
-        .material-card .mc-btn-action {
-            background-color: #f44336;
-        }
-        .material-card .mc-btn-action:hover {
-            background-color: #b71c1c;
-        }
-        .material-card .mc-footer h4 {
-            color: #b71c1c;
-        }
-        .material-card .mc-footer a {
-            background-color: #b71c1c;
-        }
-        .material-card.mc-active .mc-content {
-            background-color: #ffebee;
-        }
-        .material-card.mc-active .mc-footer {
-            background-color: #ffcdd2;
-        }
-        .material-card.mc-active .mc-btn-action {
-            border-color: #ffebee;
-        }
-        .material-card.Blue-Grey h2 {
-            background-color: #607d8b;
-        }
-        .material-card.Blue-Grey h2:after {
-            border-top-color: #607d8b;
-            border-right-color: #607d8b;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-        }
-        .material-card.Blue-Grey h2:before {
-            border-top-color: transparent;
-            border-right-color: #263238;
-            border-bottom-color: #263238;
-            border-left-color: transparent;
-        }
-        .material-card.Blue-Grey.mc-active h2:before {
-            border-top-color: transparent;
-            border-right-color: #607d8b;
-            border-bottom-color: #607d8b;
-            border-left-color: transparent;
-        }
-        .material-card.Blue-Grey.mc-active h2:after {
-            border-top-color: #263238;
-            border-right-color: #263238;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-        }
-        .material-card.Blue-Grey .mc-btn-action {
-            background-color: #607d8b;
-        }
-        .material-card.Blue-Grey .mc-btn-action:hover {
-            background-color: #263238;
-        }
-        .material-card.Blue-Grey .mc-footer h4 {
-            color: #263238;
-        }
-        .material-card.Blue-Grey .mc-footer a {
-            background-color: #263238;
-        }
-        .material-card.Blue-Grey.mc-active .mc-content {
-            background-color: #eceff1;
-        }
-        .material-card.Blue-Grey.mc-active .mc-footer {
-            background-color: #cfd8dc;
-        }
-        .material-card.Blue-Grey.mc-active .mc-btn-action {
-            border-color: #eceff1;
-        }
-        .material-card.Pink h2 {
-            background-color: #e91e63;
-        }
-        .material-card.Pink h2:after {
-            border-top-color: #e91e63;
-            border-right-color: #e91e63;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-        }
-        .material-card.Pink h2:before {
-            border-top-color: transparent;
-            border-right-color: #880e4f;
-            border-bottom-color: #880e4f;
-            border-left-color: transparent;
-        }
-        .material-card.Pink.mc-active h2:before {
-            border-top-color: transparent;
-            border-right-color: #e91e63;
-            border-bottom-color: #e91e63;
-            border-left-color: transparent;
-        }
-        .material-card.Pink.mc-active h2:after {
-            border-top-color: #880e4f;
-            border-right-color: #880e4f;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-        }
-        .material-card.Pink .mc-btn-action {
-            background-color: #e91e63;
-        }
-        .material-card.Pink .mc-btn-action:hover {
-            background-color: #880e4f;
-        }
-        .material-card.Pink .mc-footer h4 {
-            color: #880e4f;
-        }
-        .material-card.Pink .mc-footer a {
-            background-color: #880e4f;
-        }
-        .material-card.Pink.mc-active .mc-content {
-            background-color: #fce4ec;
-        }
-        .material-card.Pink.mc-active .mc-footer {
-            background-color: #f8bbd0;
-        }
-        .material-card.Pink.mc-active .mc-btn-action {
-            border-color: #fce4ec;
-        }
-        .material-card.Purple h2 {
-            background-color: #9c27b0;
-        }
-        .material-card.Purple h2:after {
-            border-top-color: #9c27b0;
-            border-right-color: #9c27b0;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-        }
-        .material-card.Purple h2:before {
-            border-top-color: transparent;
-            border-right-color: #4a148c;
-            border-bottom-color: #4a148c;
-            border-left-color: transparent;
-        }
-        .material-card.Purple.mc-active h2:before {
-            border-top-color: transparent;
-            border-right-color: #9c27b0;
-            border-bottom-color: #9c27b0;
-            border-left-color: transparent;
-        }
-        .material-card.Purple.mc-active h2:after {
-            border-top-color: #4a148c;
-            border-right-color: #4a148c;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-        }
-        .material-card.Purple .mc-btn-action {
-            background-color: #9c27b0;
-        }
-        .material-card.Purple .mc-btn-action:hover {
-            background-color: #4a148c;
-        }
-        .material-card.Purple .mc-footer h4 {
-            color: #4a148c;
-        }
-        .material-card.Purple .mc-footer a {
-            background-color: #4a148c;
-        }
-        .material-card.Purple.mc-active .mc-content {
-            background-color: #f3e5f5;
-        }
-        .material-card.Purple.mc-active .mc-footer {
-            background-color: #e1bee7;
-        }
-        .material-card.Purple.mc-active .mc-btn-action {
-            border-color: #f3e5f5;
-        }
-        .material-card.Deep-Purple h2 {
-            background-color: #673ab7;
-        }
-        .material-card.Deep-Purple h2:after {
-            border-top-color: #673ab7;
-            border-right-color: #673ab7;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-        }
-        .material-card.Deep-Purple h2:before {
-            border-top-color: transparent;
-            border-right-color: #311b92;
-            border-bottom-color: #311b92;
-            border-left-color: transparent;
-        }
-        .material-card.Deep-Purple.mc-active h2:before {
-            border-top-color: transparent;
-            border-right-color: #673ab7;
-            border-bottom-color: #673ab7;
-            border-left-color: transparent;
-        }
-        .material-card.Deep-Purple.mc-active h2:after {
-            border-top-color: #311b92;
-            border-right-color: #311b92;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-        }
-        .material-card.Deep-Purple .mc-btn-action {
-            background-color: #673ab7;
-        }
-        .material-card.Deep-Purple .mc-btn-action:hover {
-            background-color: #311b92;
-        }
-        .material-card.Deep-Purple .mc-footer h4 {
-            color: #311b92;
-        }
-        .material-card.Deep-Purple .mc-footer a {
-            background-color: #311b92;
-        }
-        .material-card.Deep-Purple.mc-active .mc-content {
-            background-color: #ede7f6;
-        }
-        .material-card.Deep-Purple.mc-active .mc-footer {
-            background-color: #d1c4e9;
-        }
-        .material-card.Deep-Purple.mc-active .mc-btn-action {
-            border-color: #ede7f6;
-        }
-        .material-card.Indigo h2 {
-            background-color: #3f51b5;
-        }
-        .material-card.Indigo h2:after {
-            border-top-color: #3f51b5;
-            border-right-color: #3f51b5;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-        }
-        .material-card.Indigo h2:before {
-            border-top-color: transparent;
-            border-right-color: #1a237e;
-            border-bottom-color: #1a237e;
-            border-left-color: transparent;
-        }
-        .material-card.Indigo.mc-active h2:before {
-            border-top-color: transparent;
-            border-right-color: #3f51b5;
-            border-bottom-color: #3f51b5;
-            border-left-color: transparent;
-        }
-        .material-card.Indigo.mc-active h2:after {
-            border-top-color: #1a237e;
-            border-right-color: #1a237e;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-        }
-        .material-card.Indigo .mc-btn-action {
-            background-color: #3f51b5;
-        }
-        .material-card.Indigo .mc-btn-action:hover {
-            background-color: #1a237e;
-        }
-        .material-card.Indigo .mc-footer h4 {
-            color: #1a237e;
-        }
-        .material-card.Indigo .mc-footer a {
-            background-color: #1a237e;
-        }
-        .material-card.Indigo.mc-active .mc-content {
-            background-color: #e8eaf6;
-        }
-        .material-card.Indigo.mc-active .mc-footer {
-            background-color: #c5cae9;
-        }
-        .material-card.Indigo.mc-active .mc-btn-action {
-            border-color: #e8eaf6;
-        }
-        .material-card.Blue h2 {
-            background-color: #2196f3;
-        }
-        .material-card.Blue h2:after {
-            border-top-color: #2196f3;
-            border-right-color: #2196f3;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-        }
-        .material-card.Blue h2:before {
-            border-top-color: transparent;
-            border-right-color: #0d47a1;
-            border-bottom-color: #0d47a1;
-            border-left-color: transparent;
-        }
-        .material-card.Blue.mc-active h2:before {
-            border-top-color: transparent;
-            border-right-color: #2196f3;
-            border-bottom-color: #2196f3;
-            border-left-color: transparent;
-        }
-        .material-card.Blue.mc-active h2:after {
-            border-top-color: #0d47a1;
-            border-right-color: #0d47a1;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-        }
-        .material-card.Blue .mc-btn-action {
-            background-color: #2196f3;
-        }
-        .material-card.Blue .mc-btn-action:hover {
-            background-color: #0d47a1;
-        }
-        .material-card.Blue .mc-footer h4 {
-            color: #0d47a1;
-        }
-        .material-card.Blue .mc-footer a {
-            background-color: #0d47a1;
-        }
-        .material-card.Blue.mc-active .mc-content {
-            background-color: #e3f2fd;
-        }
-        .material-card.Blue.mc-active .mc-footer {
-            background-color: #bbdefb;
-        }
-        .material-card.Blue.mc-active .mc-btn-action {
-            border-color: #e3f2fd;
-        }
-        .material-card.Light-Blue h2 {
-            background-color: #03a9f4;
-        }
-        .material-card.Light-Blue h2:after {
-            border-top-color: #03a9f4;
-            border-right-color: #03a9f4;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-        }
-        .material-card.Light-Blue h2:before {
-            border-top-color: transparent;
-            border-right-color: #01579b;
-            border-bottom-color: #01579b;
-            border-left-color: transparent;
-        }
-        .material-card.Light-Blue.mc-active h2:before {
-            border-top-color: transparent;
-            border-right-color: #03a9f4;
-            border-bottom-color: #03a9f4;
-            border-left-color: transparent;
-        }
-        .material-card.Light-Blue.mc-active h2:after {
-            border-top-color: #01579b;
-            border-right-color: #01579b;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-        }
-        .material-card.Light-Blue .mc-btn-action {
-            background-color: #03a9f4;
-        }
-        .material-card.Light-Blue .mc-btn-action:hover {
-            background-color: #01579b;
-        }
-        .material-card.Light-Blue .mc-footer h4 {
-            color: #01579b;
-        }
-        .material-card.Light-Blue .mc-footer a {
-            background-color: #01579b;
-        }
-        .material-card.Light-Blue.mc-active .mc-content {
-            background-color: #e1f5fe;
-        }
-        .material-card.Light-Blue.mc-active .mc-footer {
-            background-color: #b3e5fc;
-        }
-        .material-card.Light-Blue.mc-active .mc-btn-action {
-            border-color: #e1f5fe;
-        }
-        .material-card.Cyan h2 {
-            background-color: #00bcd4;
-        }
-        .material-card.Cyan h2:after {
-            border-top-color: #00bcd4;
-            border-right-color: #00bcd4;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-        }
-        .material-card.Cyan h2:before {
-            border-top-color: transparent;
-            border-right-color: #006064;
-            border-bottom-color: #006064;
-            border-left-color: transparent;
-        }
-        .material-card.Cyan.mc-active h2:before {
-            border-top-color: transparent;
-            border-right-color: #00bcd4;
-            border-bottom-color: #00bcd4;
-            border-left-color: transparent;
-        }
-        .material-card.Cyan.mc-active h2:after {
-            border-top-color: #006064;
-            border-right-color: #006064;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-        }
-        .material-card.Cyan .mc-btn-action {
-            background-color: #00bcd4;
-        }
-        .material-card.Cyan .mc-btn-action:hover {
-            background-color: #006064;
-        }
-        .material-card.Cyan .mc-footer h4 {
-            color: #006064;
-        }
-        .material-card.Cyan .mc-footer a {
-            background-color: #006064;
-        }
-        .material-card.Cyan.mc-active .mc-content {
-            background-color: #e0f7fa;
-        }
-        .material-card.Cyan.mc-active .mc-footer {
-            background-color: #b2ebf2;
-        }
-        .material-card.Cyan.mc-active .mc-btn-action {
-            border-color: #e0f7fa;
-        }
-        .material-card.Teal h2 {
-            background-color: #009688;
-        }
-        .material-card.Teal h2:after {
-            border-top-color: #009688;
-            border-right-color: #009688;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-        }
-        .material-card.Teal h2:before {
-            border-top-color: transparent;
-            border-right-color: #004d40;
-            border-bottom-color: #004d40;
-            border-left-color: transparent;
-        }
-        .material-card.Teal.mc-active h2:before {
-            border-top-color: transparent;
-            border-right-color: #009688;
-            border-bottom-color: #009688;
-            border-left-color: transparent;
-        }
-        .material-card.Teal.mc-active h2:after {
-            border-top-color: #004d40;
-            border-right-color: #004d40;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-        }
-        .material-card.Teal .mc-btn-action {
-            background-color: #009688;
-        }
-        .material-card.Teal .mc-btn-action:hover {
-            background-color: #004d40;
-        }
-        .material-card.Teal .mc-footer h4 {
-            color: #004d40;
-        }
-        .material-card.Teal .mc-footer a {
-            background-color: #004d40;
-        }
-        .material-card.Teal.mc-active .mc-content {
-            background-color: #e0f2f1;
-        }
-        .material-card.Teal.mc-active .mc-footer {
-            background-color: #b2dfdb;
-        }
-        .material-card.Teal.mc-active .mc-btn-action {
-            border-color: #e0f2f1;
-        }
-        .material-card.Green h2 {
-            background-color: #4caf50;
-        }
-        .material-card.Green h2:after {
-            border-top-color: #4caf50;
-            border-right-color: #4caf50;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-        }
-        .material-card.Green h2:before {
-            border-top-color: transparent;
-            border-right-color: #1b5e20;
-            border-bottom-color: #1b5e20;
-            border-left-color: transparent;
-        }
-        .material-card.Green.mc-active h2:before {
-            border-top-color: transparent;
-            border-right-color: #4caf50;
-            border-bottom-color: #4caf50;
-            border-left-color: transparent;
-        }
-        .material-card.Green.mc-active h2:after {
-            border-top-color: #1b5e20;
-            border-right-color: #1b5e20;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-        }
-        .material-card.Green .mc-btn-action {
-            background-color: #4caf50;
-        }
-        .material-card.Green .mc-btn-action:hover {
-            background-color: #1b5e20;
-        }
-        .material-card.Green .mc-footer h4 {
-            color: #1b5e20;
-        }
-        .material-card.Green .mc-footer a {
-            background-color: #1b5e20;
-        }
-        .material-card.Green.mc-active .mc-content {
-            background-color: #e8f5e9;
-        }
-        .material-card.Green.mc-active .mc-footer {
-            background-color: #c8e6c9;
-        }
-        .material-card.Green.mc-active .mc-btn-action {
-            border-color: #e8f5e9;
-        }
-        .material-card.Light-Green h2 {
-            background-color: #8bc34a;
-        }
-        .material-card.Light-Green h2:after {
-            border-top-color: #8bc34a;
-            border-right-color: #8bc34a;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-        }
-        .material-card.Light-Green h2:before {
-            border-top-color: transparent;
-            border-right-color: #33691e;
-            border-bottom-color: #33691e;
-            border-left-color: transparent;
-        }
-        .material-card.Light-Green.mc-active h2:before {
-            border-top-color: transparent;
-            border-right-color: #8bc34a;
-            border-bottom-color: #8bc34a;
-            border-left-color: transparent;
-        }
-        .material-card.Light-Green.mc-active h2:after {
-            border-top-color: #33691e;
-            border-right-color: #33691e;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-        }
-        .material-card.Light-Green .mc-btn-action {
-            background-color: #8bc34a;
-        }
-        .material-card.Light-Green .mc-btn-action:hover {
-            background-color: #33691e;
-        }
-        .material-card.Light-Green .mc-footer h4 {
-            color: #33691e;
-        }
-        .material-card.Light-Green .mc-footer a {
-            background-color: #33691e;
-        }
-        .material-card.Light-Green.mc-active .mc-content {
-            background-color: #f1f8e9;
-        }
-        .material-card.Light-Green.mc-active .mc-footer {
-            background-color: #dcedc8;
-        }
-        .material-card.Light-Green.mc-active .mc-btn-action {
-            border-color: #f1f8e9;
-        }
-        .material-card.Lime h2 {
-            background-color: #cddc39;
-        }
-        .material-card.Lime h2:after {
-            border-top-color: #cddc39;
-            border-right-color: #cddc39;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-        }
-        .material-card.Lime h2:before {
-            border-top-color: transparent;
-            border-right-color: #827717;
-            border-bottom-color: #827717;
-            border-left-color: transparent;
-        }
-        .material-card.Lime.mc-active h2:before {
-            border-top-color: transparent;
-            border-right-color: #cddc39;
-            border-bottom-color: #cddc39;
-            border-left-color: transparent;
-        }
-        .material-card.Lime.mc-active h2:after {
-            border-top-color: #827717;
-            border-right-color: #827717;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-        }
-        .material-card.Lime .mc-btn-action {
-            background-color: #cddc39;
-        }
-        .material-card.Lime .mc-btn-action:hover {
-            background-color: #827717;
-        }
-        .material-card.Lime .mc-footer h4 {
-            color: #827717;
-        }
-        .material-card.Lime .mc-footer a {
-            background-color: #827717;
-        }
-        .material-card.Lime.mc-active .mc-content {
-            background-color: #f9fbe7;
-        }
-        .material-card.Lime.mc-active .mc-footer {
-            background-color: #f0f4c3;
-        }
-        .material-card.Lime.mc-active .mc-btn-action {
-            border-color: #f9fbe7;
-        }
-        .material-card.Yellow h2 {
-            background-color: #ffeb3b;
-        }
-        .material-card.Yellow h2:after {
-            border-top-color: #ffeb3b;
-            border-right-color: #ffeb3b;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-        }
-        .material-card.Yellow h2:before {
-            border-top-color: transparent;
-            border-right-color: #f57f17;
-            border-bottom-color: #f57f17;
-            border-left-color: transparent;
-        }
-        .material-card.Yellow.mc-active h2:before {
-            border-top-color: transparent;
-            border-right-color: #ffeb3b;
-            border-bottom-color: #ffeb3b;
-            border-left-color: transparent;
-        }
-        .material-card.Yellow.mc-active h2:after {
-            border-top-color: #f57f17;
-            border-right-color: #f57f17;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-        }
-        .material-card.Yellow .mc-btn-action {
-            background-color: #ffeb3b;
-        }
-        .material-card.Yellow .mc-btn-action:hover {
-            background-color: #f57f17;
-        }
-        .material-card.Yellow .mc-footer h4 {
-            color: #f57f17;
-        }
-        .material-card.Yellow .mc-footer a {
-            background-color: #f57f17;
-        }
-        .material-card.Yellow.mc-active .mc-content {
-            background-color: #fffde7;
-        }
-        .material-card.Yellow.mc-active .mc-footer {
-            background-color: #fff9c4;
-        }
-        .material-card.Yellow.mc-active .mc-btn-action {
-            border-color: #fffde7;
-        }
-        .material-card.Amber h2 {
-            background-color: #ffc107;
-        }
-        .material-card.Amber h2:after {
-            border-top-color: #ffc107;
-            border-right-color: #ffc107;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-        }
-        .material-card.Amber h2:before {
-            border-top-color: transparent;
-            border-right-color: #ff6f00;
-            border-bottom-color: #ff6f00;
-            border-left-color: transparent;
-        }
-        .material-card.Amber.mc-active h2:before {
-            border-top-color: transparent;
-            border-right-color: #ffc107;
-            border-bottom-color: #ffc107;
-            border-left-color: transparent;
-        }
-        .material-card.Amber.mc-active h2:after {
-            border-top-color: #ff6f00;
-            border-right-color: #ff6f00;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-        }
-        .material-card.Amber .mc-btn-action {
-            background-color: #ffc107;
-        }
-        .material-card.Amber .mc-btn-action:hover {
-            background-color: #ff6f00;
-        }
-        .material-card.Amber .mc-footer h4 {
-            color: #ff6f00;
-        }
-        .material-card.Amber .mc-footer a {
-            background-color: #ff6f00;
-        }
-        .material-card.Amber.mc-active .mc-content {
-            background-color: #fff8e1;
-        }
-        .material-card.Amber.mc-active .mc-footer {
-            background-color: #ffecb3;
-        }
-        .material-card.Amber.mc-active .mc-btn-action {
-            border-color: #fff8e1;
-        }
-        .material-card.Orange h2 {
-            background-color: #ff9800;
-        }
-        .material-card.Orange h2:after {
-            border-top-color: #ff9800;
-            border-right-color: #ff9800;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-        }
-        .material-card.Orange h2:before {
-            border-top-color: transparent;
-            border-right-color: #e65100;
-            border-bottom-color: #e65100;
-            border-left-color: transparent;
-        }
-        .material-card.Orange.mc-active h2:before {
-            border-top-color: transparent;
-            border-right-color: #ff9800;
-            border-bottom-color: #ff9800;
-            border-left-color: transparent;
-        }
-        .material-card.Orange.mc-active h2:after {
-            border-top-color: #e65100;
-            border-right-color: #e65100;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-        }
-        .material-card.Orange .mc-btn-action {
-            background-color: #ff9800;
-        }
-        .material-card.Orange .mc-btn-action:hover {
-            background-color: #e65100;
-        }
-        .material-card.Orange .mc-footer h4 {
-            color: #e65100;
-        }
-        .material-card.Orange .mc-footer a {
-            background-color: #e65100;
-        }
-        .material-card.Orange.mc-active .mc-content {
-            background-color: #fff3e0;
-        }
-        .material-card.Orange.mc-active .mc-footer {
-            background-color: #ffe0b2;
-        }
-        .material-card.Orange.mc-active .mc-btn-action {
-            border-color: #fff3e0;
-        }
-        .material-card.Deep-Orange h2 {
-            background-color: #ff5722;
-        }
-        .material-card.Deep-Orange h2:after {
-            border-top-color: #ff5722;
-            border-right-color: #ff5722;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-        }
-        .material-card.Deep-Orange h2:before {
-            border-top-color: transparent;
-            border-right-color: #bf360c;
-            border-bottom-color: #bf360c;
-            border-left-color: transparent;
-        }
-        .material-card.Deep-Orange.mc-active h2:before {
-            border-top-color: transparent;
-            border-right-color: #ff5722;
-            border-bottom-color: #ff5722;
-            border-left-color: transparent;
-        }
-        .material-card.Deep-Orange.mc-active h2:after {
-            border-top-color: #bf360c;
-            border-right-color: #bf360c;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-        }
-        .material-card.Deep-Orange .mc-btn-action {
-            background-color: #ff5722;
-        }
-        .material-card.Deep-Orange .mc-btn-action:hover {
-            background-color: #bf360c;
-        }
-        .material-card.Deep-Orange .mc-footer h4 {
-            color: #bf360c;
-        }
-        .material-card.Deep-Orange .mc-footer a {
-            background-color: #bf360c;
-        }
-        .material-card.Deep-Orange.mc-active .mc-content {
-            background-color: #fbe9e7;
-        }
-        .material-card.Deep-Orange.mc-active .mc-footer {
-            background-color: #ffccbc;
-        }
-        .material-card.Deep-Orange.mc-active .mc-btn-action {
-            border-color: #fbe9e7;
-        }
-        .material-card.Brown h2 {
-            background-color: #795548;
-        }
-        .material-card.Brown h2:after {
-            border-top-color: #795548;
-            border-right-color: #795548;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-        }
-        .material-card.Brown h2:before {
-            border-top-color: transparent;
-            border-right-color: #3e2723;
-            border-bottom-color: #3e2723;
-            border-left-color: transparent;
-        }
-        .material-card.Brown.mc-active h2:before {
-            border-top-color: transparent;
-            border-right-color: #795548;
-            border-bottom-color: #795548;
-            border-left-color: transparent;
-        }
-        .material-card.Brown.mc-active h2:after {
-            border-top-color: #3e2723;
-            border-right-color: #3e2723;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-        }
-        .material-card.Brown .mc-btn-action {
-            background-color: #795548;
-        }
-        .material-card.Brown .mc-btn-action:hover {
-            background-color: #3e2723;
-        }
-        .material-card.Brown .mc-footer h4 {
-            color: #3e2723;
-        }
-        .material-card.Brown .mc-footer a {
-            background-color: #3e2723;
-        }
-        .material-card.Brown.mc-active .mc-content {
-            background-color: #efebe9;
-        }
-        .material-card.Brown.mc-active .mc-footer {
-            background-color: #d7ccc8;
-        }
-        .material-card.Brown.mc-active .mc-btn-action {
-            border-color: #efebe9;
-        }
-        .material-card.Grey h2 {
-            background-color: #9e9e9e;
-        }
-        .material-card.Grey h2:after {
-            border-top-color: #9e9e9e;
-            border-right-color: #9e9e9e;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-        }
-        .material-card.Grey h2:before {
-            border-top-color: transparent;
-            border-right-color: #212121;
-            border-bottom-color: #212121;
-            border-left-color: transparent;
-        }
-        .material-card.Grey.mc-active h2:before {
-            border-top-color: transparent;
-            border-right-color: #9e9e9e;
-            border-bottom-color: #9e9e9e;
-            border-left-color: transparent;
-        }
-        .material-card.Grey.mc-active h2:after {
-            border-top-color: #212121;
-            border-right-color: #212121;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-        }
-        .material-card.Grey .mc-btn-action {
-            background-color: #9e9e9e;
-        }
-        .material-card.Grey .mc-btn-action:hover {
-            background-color: #212121;
-        }
-        .material-card.Grey .mc-footer h4 {
-            color: #212121;
-        }
-        .material-card.Grey .mc-footer a {
-            background-color: #212121;
-        }
-        .material-card.Grey.mc-active .mc-content {
-            background-color: #fafafa;
-        }
-        .material-card.Grey.mc-active .mc-footer {
-            background-color: #f5f5f5;
-        }
-        .material-card.Grey.mc-active .mc-btn-action {
-            border-color: #fafafa;
-        }
-        .material-card.Blue-Grey h2 {
-            background-color: #607d8b;
-        }
-        .material-card.Blue-Grey h2:after {
-            border-top-color: #607d8b;
-            border-right-color: #607d8b;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-        }
-        .material-card.Blue-Grey h2:before {
-            border-top-color: transparent;
-            border-right-color: #263238;
-            border-bottom-color: #263238;
-            border-left-color: transparent;
-        }
-        .material-card.Blue-Grey.mc-active h2:before {
-            border-top-color: transparent;
-            border-right-color: #607d8b;
-            border-bottom-color: #607d8b;
-            border-left-color: transparent;
-        }
-        .material-card.Blue-Grey.mc-active h2:after {
-            border-top-color: #263238;
-            border-right-color: #263238;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-        }
-        .material-card.Blue-Grey .mc-btn-action {
-            background-color: #607d8b;
-        }
-        .material-card.Blue-Grey .mc-btn-action:hover {
-            background-color: #263238;
-        }
-        .material-card.Blue-Grey .mc-footer h4 {
-            color: #263238;
-        }
-        .material-card.Blue-Grey .mc-footer a {
-            background-color: #263238;
-        }
-        .material-card.Blue-Grey.mc-active .mc-content {
-            background-color: #eceff1;
-        }
-        .material-card.Blue-Grey.mc-active .mc-footer {
-            background-color: #cfd8dc;
-        }
-        .material-card.Blue-Grey.mc-active .mc-btn-action {
-            border-color: #eceff1;
-        }
-       
-       
-        </style>
-    </head>
+<section class="header16 cid-u414BuTG2K mbr-fullscreen mbr-parallax-background" id="hero-17-u414BuTG2K">
+  <div class="mbr-overlay" style="opacity: 0.3; background-color: rgb(0, 0, 0);"></div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="content-wrap col-12 col-md-10">
+        <div id="search_bar">
+          <input id="search_value" type="text" placeholder="Search by Book Title, Author, or ISBN">
+          <a href="#">
+            <i class="fa fa-search"></i>
+          </a>
+        </div>
+        <p class="mbr-fonts-style mbr-text mbr-white mb-4 display-7">Explore, Engage, and Enhance Your Reading Experience: Scribble your thoughts on the books you love</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <body id="body">
-        <!-- ======= Header ======= -->
-        <header id="header" class="fixed-top">
-            <!--Logo-->
-            <div class="logo">
-                <a href="index.html"><img src="/images/headerBook.jpg" alt="logo">Arsh's Library</a>
-            </div>
-            <!--Search bar-->
-            <div id="search_bar">
-                <input id="search_value" type = "text" placeholder="Search by Book Title, Author, or ISBN">
-                <a href = "#">
-                  <i class = "fa fa-search"></i>
-                </a>
-            </div>
-        </header>
+    <style>
+.cid-u414BuVKn5 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  background-color: transparent;
+}
+.cid-u414BuVKn5 .mbr-overlay {
+  background-color: #ffffff;
+  opacity: 0.4;
+}
+.cid-u414BuVKn5 form .mbr-section-btn {
+  text-align: center;
+  width: 100%;
+}
+.cid-u414BuVKn5 form .mbr-section-btn .btn {
+  display: inline-flex;
+}
+@media (max-width: 991px) {
+  .cid-u414BuVKn5 form .mbr-section-btn .btn {
+    width: 100%;
+  }
+}
+.cid-u414BuVKn5 .content-head {
+  max-width: 800px;
+}
 
-           
-        <div class="page-title" id=title_div></div>
-        <!--
-        - ======= Book Info from Search ======= 
-        <div class="list-book search">
-            <div class="row1">
-                <div id="book1"></div>
-                <div id="book2"></div>
-                <div id="book3"></div>
-            </div>
-            <div class="row2">
-                <div id="book4"></div>
-                <div id="book5"></div>
+</style>
+<section class="form5 cid-u414BuVKn5" id="contact-form-3-u414BuVKn5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 content-head">
+                <div class="mbr-section-head mb-5">
+                    <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                        <strong>Get in Touch</strong>
+                    </h3>                    
+                </div>
             </div>
         </div>
-        --->
-
-        <section class="container">
-            <div class="row active-with-click">
-                <!--books will be loaded here from main.js-->
+        <div class="row justify-content-center">
+            <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
+                <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="">
+                    <div class="row">
+                        <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out the form!</div>
+                        <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
+                            Oops...! some problem!
+                        </div>
+                    </div>
+                    <div class="dragArea row">
+                        <div class="col-md col-sm-12 form-group mb-3" data-for="name">
+                            <input type="text" name="name" placeholder="Name" data-form-field="name" class="form-control" value="" id="name-form02-0">
+                        </div>
+                        <div class="col-md col-sm-12 form-group mb-3" data-for="email">
+                            <input type="email" name="email" placeholder="Email" data-form-field="email" class="form-control" value="" id="email-form02-0">
+                        </div>
+                        <div class="col-12 form-group mb-3" data-for="url">
+                            <input type="url" name="url" placeholder="Phone" data-form-field="url" class="form-control" value="" id="url-form5-0">
+                        </div>
+                        <div class="col-12 form-group mb-3" data-for="textarea">
+                            <textarea name="textarea" placeholder="Message" data-form-field="textarea" class="form-control" id="textarea-form02-0"></textarea>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn"><button type="submit" class="btn btn-primary display-7">Send Message</button></div>
+                    </div>
+                </form>
             </div>
-        </section>
-    </body>
+        </div>
+    </div>
+</section>
+    <style>
+.cid-u414BuVCzx {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background: transparent;
+}
+.cid-u414BuVCzx .mbr-fallback-image.disabled {
+  display: none;
+}
+.cid-u414BuVCzx .mbr-fallback-image {
+  display: block;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+@media (max-width: 992px) {
+  .cid-u414BuVCzx .row .map-wrapper {
+    margin-top: 2rem;
+  }
+}
+@media (max-width: 767px) {
+  .cid-u414BuVCzx .row .map-wrapper {
+    margin-top: 1rem;
+  }
+}
+.cid-u414BuVCzx .google-map {
+  height: 100%;
+  position: relative;
+}
+.cid-u414BuVCzx .google-map iframe {
+  height: 100%;
+  width: 100%;
+}
+@media (max-width: 992px) {
+  .cid-u414BuVCzx .google-map iframe {
+    min-height: 350px;
+  }
+}
+.cid-u414BuVCzx .google-map [data-state-details] {
+  color: #6b6763;
+  height: 1.5em;
+  margin-top: -0.75em;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 100%;
+}
+.cid-u414BuVCzx .google-map[data-state] {
+  background: #e9e5dc;
+}
+.cid-u414BuVCzx .google-map[data-state="loading"] [data-state-details] {
+  display: none;
+}
+.cid-u414BuVCzx .card-wrapper {
+  padding: 2.25rem;
+  background: #ffffff;
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .cid-u414BuVCzx .card-wrapper {
+    padding: 1.5rem;
+  }
+}
+@media (max-width: 767px) {
+  .cid-u414BuVCzx .card-wrapper {
+    padding: 2rem 1.5rem;
+  }
+}
+.cid-u414BuVCzx ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.cid-u414BuVCzx .content-head {
+  max-width: 800px;
+}
+
+</style>
+<section class="contacts02 map1 cid-u414BuVCzx" id="contacts-2-u414BuVCzx">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 content-head">
+                <div class="mbr-section-head mb-5">
+                    <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                        <strong>Contact Us</strong>
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="card col-12 col-md-12 col-lg-6">
+                <div class="card-wrapper">
+                    <div class="text-wrapper">
+                        <ul class="list mbr-fonts-style display-7">
+                          <li class="mbr-text item-wrap">Phone: <a href="tel:123-456-7890" class="text-black">123-456-7890</a></li>
+                          <li class="mbr-text item-wrap">Email: <a href="mailto:info@mylibrary.com" class="text-black">harsimran.hd1@gmail.com</a></li>
+                          <li class="mbr-text item-wrap">Address: Winnipeg Canada</li>
+                          <li class="mbr-text item-wrap">Working Hours: Mon-Fri: 9am-6pm</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="map-wrapper col-md-12 col-lg-6">
+                <div class="google-map"><iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key&#x3D;AIzaSyCt1265A4qvZy9HKUeA8J15AOC4SrCyZe4&amp;q&#x3D;Winnipeg%20Canada" allowfullscreen=""></iframe></div>
+            </div>
+        </div>
+    </div>
+</section>
+    <style>
+.cid-u414BuWCTY {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  background-color: #000000;
+}
+.cid-u414BuWCTY .social-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.cid-u414BuWCTY .social-row .soc-item {
+  margin: 8px;
+}
+.cid-u414BuWCTY .social-row .soc-item a:hover .mbr-iconfont,
+.cid-u414BuWCTY .social-row .soc-item a:focus .mbr-iconfont {
+  background-color: #ffffff;
+}
+.cid-u414BuWCTY .social-row .soc-item a .mbr-iconfont {
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  font-size: 32px;
+  background-color: #edefeb;
+  color: #000000;
+  transition: all 0.3s ease-in-out;
+}
+.cid-u414BuWCTY .row-links {
+  width: 100%;
+  justify-content: center;
+}
+.cid-u414BuWCTY .header-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin-bottom: 0;
+}
+.cid-u414BuWCTY .header-menu li {
+  padding: 0 1rem 1rem 1rem;
+}
+.cid-u414BuWCTY .header-menu li p {
+  margin: 0;
+}
+.cid-u414BuWCTY .copyright {
+  margin-bottom: 0;
+  color: #ffffff;
+  text-align: center;
+}
+.cid-u414BuWCTY .mbr-section-title {
+  color: #ffffff;
+}
+
+</style>
+<section class="footer3 cid-u414BuWCTY" once="footers" id="footer-3-u414BuWCTY">
+    <div class="container">
+        <div class="row">
+            <div class="row-links">
+                <ul class="header-menu">
+                <li class="header-menu-item mbr-fonts-style display-5">
+                    <a href="#" class="text-white">Home</a>
+                  </li><li class="header-menu-item mbr-fonts-style display-5">
+                    <a href="#" class="text-white">About</a>
+                  </li><li class="header-menu-item mbr-fonts-style display-5">
+                    <a href="#" class="text-white">Services</a>
+                  </li><li class="header-menu-item mbr-fonts-style display-5">
+                    <a href="#" class="text-white">Contact</a>
+                  </li></ul>
+              </div>
+
+            <div class="col-12 mt-4">
+                <div class="social-row">
+                    <div class="soc-item">
+                        <a href="#" target="_blank">
+                            <span class="mbr-iconfont socicon socicon-linkedin"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 mt-5">
+                <p class="mbr-fonts-style copyright display-7">
+                    © 2024 My Library. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="assets/parallax/jarallax.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/dropdown/js/navbar-dropdown.js"></script>
+  <script src="assets/scrollgallery/scroll-gallery.js"></script>
+  <script src="assets/smoothscroll/smooth-scroll.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+  <script src="assets/formoid/formoid.min.js"></script>
+  
+  <script>
+
+    (function(){
+      var animationInput = document.createElement('input');
+      animationInput.setAttribute('name', 'animation');
+      animationInput.setAttribute('type', 'hidden');
+      document.body.append(animationInput);
+    })();
+
+  </script>
+</body>
 </html>
 
