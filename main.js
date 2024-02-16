@@ -1,5 +1,5 @@
 
-const apiKey = 'AIzaSyC7LZBRefKLivJ7XwtFz-h633JT5xg2SkU';
+const apiKey = '';
 
 $('#search_value').change(function(){
   
