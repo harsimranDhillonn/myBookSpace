@@ -1,46 +1,38 @@
 
-const apiKey = '';
+$(document).ready(function() {
+  $('#search_value').change(function() {
+    const content = $('#search_value').val(); // Get the query entered in the search bar
+    console.log("Content: " + content); // Testing purposes
 
-$('#search_value').change(function(){
-  
-  const content= $('#search_value').val(); //get the query entered in the search bar
-  console.log("Content: " + content); //testing purposes
-  
-  //document.getElementById("search_value").value= ""; //clear out the search bar
+    // Redirect to the search.html page with the query parameter
+    window.location.href = `search.html?q=${encodeURIComponent(content)}`;
+  });
 
-  window.location.href = `search.html?q=${encodeURIComponent(content)}`;
-  /*
-  var h4 = document.createElement('h4');
-  h4.classList.add('mbr-section-subtitle', 'mbr-fonts-style', 'align-center', 'mb-0', 'mt-4', 'display-7');
-  var strong = document.createElement('strong');
-  strong.textContent = content;
-  h4.appendChild = strong;
-  document.getElementById('bookTitle').appendChild= h4;
-  */
-  $(document).ready(function() {
-  document.addEventListener('DOMContentLoaded', function() {
+  // Check if there is a query parameter in the URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const queryParam = urlParams.get('q');
+
+  if (queryParam) {
+    // Update the content on the search.html page based on the query parameter i.e the Book title
     const dynamicValueElement = document.getElementById('bookTitle');
     if (dynamicValueElement) {
-      console.log("element found!")
-        dynamicValueElement.textContent = content;
+      const strong = document.createElement('strong');
+      strong.textContent ="  "+ queryParam;
+      dynamicValueElement.appendChild(strong);
     }
-  }),
-  console.log("im through");
-}),
-  
 
-  //call function "getBookInfo" to send query out to google books for available books
-  getBookInfo(content)
-  .then((books) => {
-    console.log('Books:', books);
-    // Process and display the book information here
-    //printVolumeInfo(books);
-  })
-  .catch((error) => {
-    console.error('Error:', error);
-  });
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
-} )
+    //call function "getBookInfo" to send query out to google books for available books
+    getBookInfo(queryParam)
+    .then((books) => {
+      console.log('Books:', books); //test book content 
+      //Process and display the book information
+      printVolumeInfo(books);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+  }
+});
 
 function printVolumeInfo(allBooks){
     //clearBookDivs();
@@ -48,85 +40,25 @@ function printVolumeInfo(allBooks){
     //show results for the 1st six books, by default google books return 10
     for(let i=0; i<6; i++){
 
-      // Create article element
-      var article = document.createElement('article');
-      article.classList.add('material-card');
+      var bookNum= i+1;
+    
+      const bookName = document.getElementById('book'+bookNum);
+      bookName.textContent =  allBooks.items[i].volumeInfo.title;
+    
+      const authorName = document.getElementById('book'+bookNum+'-author');
+      authorName.textContent = 'By: '+allBooks.items[i].volumeInfo.authors[0];
 
-      // Create h2 element
-      var h2 = document.createElement('h2');
+      const img = document.getElementById('book'+bookNum+'-img');
+      img.src = allBooks.items[i].volumeInfo.imageLinks.thumbnail;
 
-      // Create span element
-      var span = document.createElement('span');
-      span.textContent =  allBooks.items[i].volumeInfo.title;
+      const pageNum= document.getElementById('book'+bookNum+'-pageNum');
+      pageNum.textContent= 'Pages: '+allBooks.items[i].volumeInfo.pageCount;
 
-      // Create strong element
-      var strong = document.createElement('strong');
-      strong.textContent = 'By: '+allBooks.items[i].volumeInfo.authors[0];
 
-      // Append span and strong to h2
-      h2.appendChild(span);
-      h2.appendChild(strong);
-
-      // Append h2 to article
-      article.appendChild(h2);
-
-      // Create div with class "mc-content"
-      var mcContent = document.createElement('div');
-      mcContent.classList.add('mc-content');
-
-      // Create div with class "img-container"
-      var imgContainer = document.createElement('div');
-      imgContainer.classList.add('img-container');
-
-      // Create img element
-      var img = document.createElement('img');
-      img.src = allBooks.items[i].volumeInfo.imageLinks.smallThumbnail;
-      img.alt = 'Book Cover';
-      img.classList.add('img-responsive');
-
-      // Append img to imgContainer
-      imgContainer.appendChild(img);
-
-      // Create div with class "mc-description"
-      var mcDescription = document.createElement('div');
-      mcDescription.classList.add('mc-description');
-      mcDescription.textContent = allBooks.items[i].volumeInfo.description;
-
-      // Append imgContainer and mcDescription to mcContent
-      mcContent.appendChild(imgContainer);
-      mcContent.appendChild(mcDescription);
-
-      // Append mcContent to article
-      article.appendChild(mcContent);
-
-      // Create a element with class "mc-btn-action"
-      var mcBtnAction = document.createElement('a');
-      mcBtnAction.classList.add('mc-btn-action');
-
-      // Create i element with class "fa fa-bars"
-      var iElement = document.createElement('i');
-      iElement.classList.add('fa', 'fa-bars');
-
-      // Append iElement to mcBtnAction
-      mcBtnAction.appendChild(iElement);
-
-      // Append mcBtnAction to article
-      article.appendChild(mcBtnAction);
-
-      // Create div with class "mc-footer"
-      var mcFooter = document.createElement('div');
-      mcFooter.classList.add('mc-footer');
-
-      // Append mcFooter to article
-      article.appendChild(mcFooter);
-
-      //creaste div with class that holds the article
-      var colmd = document.createElement('div');
-      colmd.classList.add('col-md-4', 'col-sm-6', 'col-xs-12')
-      colmd.appendChild(article)
-
-      //append colmd into div that holds all articles
-      document.getElementsByClassName('row active-with-click')[0].appendChild(colmd)
+     /*
+      const bookDescription = document.getElementById('Book'+i+'-description');
+      bookDescription.textContent = allBooks.items[i].volumeInfo.description;
+      */
     }
 }
 

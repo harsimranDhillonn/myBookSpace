@@ -1154,47 +1154,6 @@
         dropdownMenusArray.forEach(dropdownMenuItem => dropdownMenuItem.classList.remove('show'));
 
         dropdownArray.forEach(dropdownItem => dropdownItem.classList.remove('open'));
-
-        // open dropdown menu on hover
-        if (!isMobile()) {
-            var menu = document.querySelector('section.menu');
-            if (menu) {
-                var width = window.innerWidth,
-                    collapsed = menu.querySelector('.navbar').classList.contains('collapsed');
-                // check if collapsed on
-                if (!collapsed) {
-                    // check width device
-                    if (width > 991) {
-                        menu.querySelectorAll('ul.navbar-nav li.dropdown').forEach(function(el) {
-                            el.addEventListener('mouseover', function() {
-                                if (!el.classList.contains('open')) {
-                                    const dropdownItem =  el.querySelector('a');
-                                    dropdownItem.parentNode.classList.toggle('open');
-                                }
-                            });
-                            el.addEventListener('mouseout', function() {
-                                if (el.classList.contains('open')) {
-                                    const dropdownItem =  el.querySelector('a');
-                                    dropdownItem.parentNode.classList.toggle('open');
-                                }
-                            });
-                        })
-                        menu.querySelectorAll('ul.navbar-nav li.dropdown .dropdown-menu .dropdown').forEach(function(el) {
-                            el.addEventListener('mouseover', function() {
-                                if (!el.classList.contains('open')) {
-                                    el.classList.toggle('open');
-                                }
-                            });
-                            el.addEventListener('mouseout', function() {
-                                if (el.classList.contains('open')) {
-                                    el.classList.toggle('open');
-                                }
-                            });
-                        })
-                    }
-                }
-            }
-        }
     }
 
     // Functions from plugins for
