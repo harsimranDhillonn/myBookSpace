@@ -66,7 +66,7 @@ function printVolumeInfo(allBooks){
 const getBookInfo = async (query) => {
   try {
     const response = await fetch(
-      `https://www.googleapis.com/books/v1/volumes?q=${query}&key=${apiKey}`
+      `https://www.googleapis.com/books/v1/volumes?q=${query}&key=${secrets.API_KEY}`
     );
 
     if (!response.ok) {
