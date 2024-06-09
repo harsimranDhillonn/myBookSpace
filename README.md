@@ -10,8 +10,7 @@ Complete:
 - Retrieving books from Google Books API
 
 Features to complete:
- - Notes page and its database
- - Favourites pages 
+ - Notes page
 
 Credit
 - mobirise: Home page template
