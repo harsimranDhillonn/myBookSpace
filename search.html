@@ -9,6 +9,7 @@
   <meta name="description" content="Explore a world of books with My Library. Search, favorite, and organize your reading list with ease.">
 
   <title>My Library books</title>
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
@@ -21,7 +22,7 @@
 
   <!--jquery, js-->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script type="module" src = "main.js"></script>
+  <script defer src = "main.js"></script>
 
 
   <!--Page css links-->
@@ -43,35 +44,33 @@
 
 <style>
     .cid-u4ek5AsRHT {
-      padding-top: 5rem;
+      padding-top: 8rem;
       padding-bottom: 5rem;
       background-color: transparent;
+      text-align: center; /* Center the content horizontally */
     }
+
     .cid-u4ek5AsRHT img,
     .cid-u4ek5AsRHT .item-img {
-      width: 100%;
-      height: 100%;
-      height: 400px;
-      align-items: center;
-    
+      width: 70%;
+      max-height: 200px; /* Ensure the image doesn't exceed 200px in height */
+      margin: 0 auto  ; /* Center the image horizontally */
+      display: block; /* Ensure proper centering */
     }
-    @media (max-width: 767px) {
+
+    @media (max-width: 400px) {
       .cid-u4ek5AsRHT img,
       .cid-u4ek5AsRHT .item-img {
-        max-height: 300px;
-        align-items: center;
-
+        width: 100%; /* Adjust width for smaller screens */
       }
     }
+
     .cid-u4ek5AsRHT .item:focus,
     .cid-u4ek5AsRHT span:focus {
       outline: none;
     }
-    .cid-u4ek5AsRHT .item-wrapper {
-      position: relative;
-    }
     .cid-u4ek5AsRHT .slide-content {
-      position: relative;
+      position: center;
       border-radius: 4px;
       background: #ffffff;
       height: 100%;
@@ -227,51 +226,33 @@
                           <div class="slide-content">
                               <div class="item-img">
                                   <div class="item-wrapper">
-                                      <img id="book1-img" data-slide-to="1" data-bs-slide-to="1">
+                                      <a href="bookDescription.html" onclick="sendBookInfo(event, this)"><img class="book-img" data-slide-to="1" data-bs-slide-to="1"></a>
                                   </div>
                               </div>
                               <div class="item-content">
-                                  <h3 class="item-title mbr-fonts-style bold display-9" id="book1"></h3>
-                                  <p class="mbr-text mbr-fonts-style mt-3 display-7" id="book1-author"></p3>
-                                  <p class="mbr-text mbr-fonts-style mt-0 display-9" id="book1-pageNum"></p5>
-                                  <p class="mbr-text mbr-fonts-style mt-3 display-7" id="book1-description"></p>
+                                  <h3 class="book-title item-title mbr-fonts-style bold display-9"></h3>
+                                  <p class="book-author mbr-text mbr-fonts-style mt-3 display-7"></p3>
+                                  <p class="book-pageNum mbr-text mbr-fonts-style mt-0 display-9"></p5>
+                                  <p class="book-description mbr-text mbr-fonts-style mt-3 display-7"></p>
                               </div>
-                              <div class="mbr-section-btn item-footer mt-2"><a href="" class="btn item-btn btn-primary display-7" target="_blank">Add to Notes</a></div>
+                              <div class="mbr-section-btn item-footer mt-2"><a href="bookDescription.html" onclick="sendBookInfo(event, this)"class="btn item-btn btn-primary display-7">Add to Notes</a></div>
                           </div>
                       </div>
                       <div class="embla__slide slider-image item" style="margin-left: 1rem; margin-right: 1rem;">
                           <div class="slide-content">
                               <div class="item-img">
                                   <div class="item-wrapper">
-                                      <img id="book2-img" data-slide-to="2" data-bs-slide-to="2">
+                                    <a href="bookDescription.html" onclick="sendBookInfo(event, this)"><img class="book-img" data-slide-to="2" data-bs-slide-to="2"></a>
                                   </div>
                               </div>
                               <div class="item-content">
-                                  <h3 class="item-title mbr-fonts-style bold display-9" id="book2"></h3>
-                                  <p class="mbr-text mbr-fonts-style mt-3 display-7" id="book2-author"></p3>
-                                  <p class="mbr-text mbr-fonts-style mt-3 display-9" id="book2-pageNum"></p5>
-                                  <p class="mbr-text mbr-fonts-style mt-3 display-7" id="book2-description"></p>
+                                  <h3 class="book-title item-title mbr-fonts-style bold display-9"></h3>
+                                  <p class="book-author mbr-text mbr-fonts-style mt-3 display-7"></p3>
+                                  <p class="book-pageNum mbr-text mbr-fonts-style mt-0 display-9"></p5>
+                                  <p class="book-description mbr-text mbr-fonts-style mt-3 display-7"></p>
                               </div>
                               <div class="mbr-section-btn item-footer mt-2">
-                                  <a href="" class="btn item-btn btn-primary display-7" target="_blank">Add to Notes</a>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="embla__slide slider-image item" style="margin-left: 1rem; margin-right: 1rem;">
-                          <div class="slide-content">
-                              <div class="item-img">
-                                  <div class="item-wrapper">
-                                      <img id="book3-img"data-slide-to="3" data-bs-slide-to="3">
-                                  </div>
-                              </div>
-                              <div class="item-content">
-                                  <h3 class="item-title mbr-fonts-style bold display-9" id="book3"></h3>
-                                  <p class="mbr-text mbr-fonts-style mt-3 display-7" id="book3-author"></p3>
-                                  <p class="mbr-text mbr-fonts-style mt-3 display-9" id="book3-pageNum"></p5>
-                                  <p class="mbr-text mbr-fonts-style mt-3 display-7" id="book3-description"></p>
-                              </div>
-                              <div class="mbr-section-btn item-footer mt-2">
-                                  <a href="" class="btn item-btn btn-primary display-7" target="_blank">Add to Notes</a>
+                                  <a href="bookDescription.html" onclick="sendBookInfo(event, this)"class="btn item-btn btn-primary display-7">Add to Notes</a>
                               </div>
                           </div>
                       </div>
@@ -279,17 +260,17 @@
                           <div class="slide-content">
                               <div class="item-img">
                                   <div class="item-wrapper">
-                                      <img id="book4-img" data-slide-to="4" data-bs-slide-to="4">
+                                    <a href="bookDescription.html" onclick="sendBookInfo(event, this)"><img class="book-img"data-slide-to="3" data-bs-slide-to="3"></a>
                                   </div>
                               </div>
                               <div class="item-content">
-                                  <h3 class="item-title mbr-fonts-style bold display-9" id="book4"></h3>
-                                  <p class="mbr-text mbr-fonts-style mt-3 display-7" id="book4-author"></p3>
-                                  <p class="mbr-text mbr-fonts-style mt-3 display-9" id="book4-pageNum"></p5>
-                                  <p class="mbr-text mbr-fonts-style mt-3 display-7" id="book4-description"></p>
+                                  <h3 class="book-title item-title mbr-fonts-style bold display-9"></h3>
+                                  <p class="book-author mbr-text mbr-fonts-style mt-3 display-7"></p3>
+                                  <p class="book-pageNum mbr-text mbr-fonts-style mt-0 display-9"></p5>
+                                  <p class="book-description mbr-text mbr-fonts-style mt-3 display-7"></p>
                               </div>
                               <div class="mbr-section-btn item-footer mt-2">
-                                  <a href="" class="btn item-btn btn-primary display-7" target="_blank">Add to Notes</a>
+                                  <a href="bookDescription.html" onclick="sendBookInfo(event, this)" class="btn item-btn btn-primary display-7">Add to Notes</a>
                               </div>
                           </div>
                       </div>
@@ -297,17 +278,35 @@
                           <div class="slide-content">
                               <div class="item-img">
                                   <div class="item-wrapper">
-                                      <img id="book5-img" data-slide-to="5" data-bs-slide-to="5">
+                                    <a href="bookDescription.html" onclick="sendBookInfo(event, this)"><img class="book-img" data-slide-to="4" data-bs-slide-to="4"></a>
                                   </div>
                               </div>
                               <div class="item-content">
-                                  <h3 class="item-title mbr-fonts-style bold display-9" id="book5"></h3>
-                                  <p class="mbr-text mbr-fonts-style mt-3 display-7" id="book5-author"></p3>
-                                  <p class="mbr-text mbr-fonts-style mt-3 display-9" id="book5-pageNum"></p5>
-                                  <p class="mbr-text mbr-fonts-style mt-3 display-7"id="book5-description"></p>
+                                  <h3 class="book-title item-title mbr-fonts-style bold display-9"></h3>
+                                  <p class="book-author mbr-text mbr-fonts-style mt-3 display-7"></p3>
+                                  <p class="book-pageNum mbr-text mbr-fonts-style mt-0 display-9"></p5>
+                                  <p class="book-description mbr-text mbr-fonts-style mt-3 display-7"></p>
                               </div>
                               <div class="mbr-section-btn item-footer mt-2">
-                                  <a href="" class="btn item-btn btn-primary display-7" target="_blank">Add to Notes</a>
+                                  <a href="bookDescription.html" onclick="sendBookInfo(event, this)"class="btn item-btn btn-primary display-7">Add to Notes</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="embla__slide slider-image item" style="margin-left: 1rem; margin-right: 1rem;">
+                          <div class="slide-content">
+                              <div class="item-img">
+                                  <div class="item-wrapper">
+                                    <a href="bookDescription.html" onclick="sendBookInfo(event, this)"><img class="book-img" data-slide-to="5" data-bs-slide-to="5"></a>
+                                  </div>
+                              </div>
+                              <div class="item-content">
+                                  <h3 class="book-title item-title mbr-fonts-style bold display-9"></h3>
+                                  <p class="book-author mbr-text mbr-fonts-style mt-3 display-7"></p3>
+                                  <p class="book-pageNum mbr-text mbr-fonts-style mt-0 display-9"></p5>
+                                  <p class="book-description mbr-text mbr-fonts-style mt-3 display-7"></p>
+                              </div>
+                              <div class="mbr-section-btn item-footer mt-2">
+                                  <a href="bookDescription.html" onclick="sendBookInfo(event, this)"class="btn item-btn btn-primary display-7">Add to Notes</a>
                               </div>
                           </div>
                       </div>
@@ -315,17 +314,17 @@
                         <div class="slide-content">
                             <div class="item-img">
                                 <div class="item-wrapper">
-                                    <img id="book6-img" data-slide-to="6" data-bs-slide-to="6">
+                                  <a href="bookDescription.html" onclick="sendBookInfo(event, this)"><img class="book-img" data-slide-to="6" data-bs-slide-to="6"></a>
                                 </div>
                             </div>
                             <div class="item-content">
-                                <h3 class="item-title mbr-fonts-style bold display-9" id="book6"></h3>
-                                <p class="mbr-text mbr-fonts-style mt-3 display-7" id="book6-author"></p3>
-                                <p class="mbr-text mbr-fonts-style mt-3 display-9" id="book6-pageNum"></p5>
-                                <p class="mbr-text mbr-fonts-style mt-3 display-7" id="book6-description"></p>
+                                <h3 class="book-title item-title mbr-fonts-style bold display-9"></h3>
+                                <p class="book-author mbr-text mbr-fonts-style mt-3 display-7"></p3>
+                                <p class="book-pageNum mbr-text mbr-fonts-style mt-0 display-9"></p5>
+                                <p class="book-description mbr-text mbr-fonts-style mt-3 display-7"></p>
                             </div>
                             <div class="mbr-section-btn item-footer mt-2">
-                                <a href="" class="btn item-btn btn-primary display-7" target="_blank">Add to Notes</a>
+                                <a href="bookDescription.html" onclick="sendBookInfo(event, this)"class="btn item-btn btn-primary display-7">Add to Notes</a>
                             </div>
                         </div>
                     </div>
@@ -344,8 +343,9 @@
   </section>
    <!--js-->
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-   <script type="module" src = "main.js"></script>
-   
    <!--horizontal scroll functionality on books-->
    <script src="assets/embla/embla.min.js"></script>
    <script src="assets/embla/script.js"></script>
+
+  </body>
+  </html>

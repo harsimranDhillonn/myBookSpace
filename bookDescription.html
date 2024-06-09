@@ -27,18 +27,86 @@
 
   <!--Page css links-->
   <link rel="stylesheet" href="navigation.css">
+  <link rel="stylesheet" href="./notes/notes.css">
 
-  <style>:root{ --background: #FAF8FB; --dominant-color: #CDB4DB; --primary-color: #FFAFCC; --secondary-color: #C1CFDE; --success-color: #90EBC1; --danger-color: #EC8F98; --warning-color: #FFDE7C; --info-color: #83E5F8; --background-text: #000000; --dominant-text: #000000; --primary-text: #000000; --secondary-text: #000000; --success-text: #000000; --danger-text: #000000; --warning-text: #000000; --info-text: #000000;}</style>
+  <style>:root{ --background: #FAF8FB; --dominant-color: #CDB4DB; --primary-color: #FFAFCC; --secondary-color: #C1CFDE; --success-color: #90EBC1; --danger-color: #EC8F98; --warning-color: #FFDE7C; --info-color: #83E5F8; --background-text: #000000; --dominant-text: #000000; --primary-text: #000000; --secondary-text: #000000; --success-text: #000000; --danger-text: #000000; --warning-text: #000000; --info-text: #000000;}
+  /*
+  .book-info-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    max-width: 90%;
+    margin: 0;
+    position: absolute;
+    left: 20px;
+    top: 150px;
+  }
+  .book-info-container h1 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  }
+  .book-info-container p {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+  */
+  
+  
+  </style>
 </head>
 <body>
-
   <!-- Include the navigation bar -->
   <section class="menu menu2 cid-u414BuTy61" once="menu" id="menu-5-u414BuTy61">
   </section>
+
+  <div class ="book-info-container">
+    <h1 id="bookTitle"></h1>
+    <img id="bookImg" src="" alt="">
+    <p id="bookAuthor"></p>
+    <p id="bookPageNum"></p>
+  </div>
+
+  <div class="notes" id="app">
+  </div>
+
   <script>
    $(function() {
             $(".menu.menu2.cid-u414BuTy61").load("navigation.html");
-        });  
+    });  
+/*
+    document.addEventListener('DOMContentLoaded', () => {
+      const title = localStorage.getItem('bookTitle');
+      const author = localStorage.getItem('bookAuthor');
+      const pageNum = localStorage.getItem('bookPageNum');
+      const imgSrc = localStorage.getItem('bookImgSrc');
+      
+      if (title && author && pageNum && imgSrc) {
+        document.getElementById('bookTitle').textContent = title;
+        document.getElementById('bookAuthor').textContent = author;
+        document.getElementById('bookPageNum').textContent = pageNum;
+        document.getElementById('bookImg').src = imgSrc;
+        document.getElementById('bookImg').alt = title;
+        
+        //clear the local storage after use
+        localStorage.removeItem('bookTitle');
+        localStorage.removeItem('bookAuthor');
+        localStorage.removeItem('bookPageNum');
+        localStorage.removeItem('bookImgSrc');
+      } else {
+        // Handle case where there is no book data
+        document.getElementById('bookTitle').textContent = 'No book information found.';
+      }
+    });
+    */
+  </script>
+  <script type="module">
+    import App from '/notes/App.js';
+    document.addEventListener("DOMContentLoaded", () => {
+        const root = document.getElementById("app");
+        const app = new App(root);
+    });
   </script>
 </body>
 </html>

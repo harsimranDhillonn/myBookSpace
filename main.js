@@ -1,16 +1,17 @@
 
+
 $(document).ready(function() {
   $('#search_value').change(function() {
     const content = $('#search_value').val(); // Get the query entered in the search bar
     console.log("Content: " + content); // Testing purposes
 
-    // Redirect to the search.html page with the query parameter
+    // Redirect to the search.hutml page with the query parameter
     window.location.href = `search.html?q=${encodeURIComponent(content)}`;
   });
 
   // Check if there is a query parameter in the URL
   const urlParams = new URLSearchParams(window.location.search);
-  const queryParam = urlParams.get('q');
+  const queryParam = urlParams.get('q'); 
 
   if (queryParam) {
     // Update the content on the search.html page based on the query parameter i.e the Book title
@@ -39,20 +40,26 @@ function printVolumeInfo(allBooks){
 
     //show results for the 1st six books, by default google books return 10
     for(let i=0; i<6; i++){
-
+      const slides = document.getElementsByClassName('embla__slide');
       var bookNum= i+1;
+
+      const bookTitle = slides[i].querySelector('.book-title');
+      bookTitle.textContent =  allBooks.items[i].volumeInfo.title;
     
-      const bookName = document.getElementById('book'+bookNum);
-      bookName.textContent =  allBooks.items[i].volumeInfo.title;
-    
-      const authorName = document.getElementById('book'+bookNum+'-author');
+      const authorName = slides[i].querySelector('.book-author');
       authorName.textContent = 'By: '+allBooks.items[i].volumeInfo.authors[0];
 
-      const img = document.getElementById('book'+bookNum+'-img');
+      const img = slides[i].querySelector('.book-img');;
       img.src = allBooks.items[i].volumeInfo.imageLinks.thumbnail;
 
-      const pageNum= document.getElementById('book'+bookNum+'-pageNum');
-      pageNum.textContent= 'Pages: '+allBooks.items[i].volumeInfo.pageCount;
+      const pageNum= slides[i].querySelector('.book-pageNum');
+      pageNum.textContent= 'Pages: ';
+      if(allBooks.items[i].volumeInfo.pageCount != undefined && allBooks.items[i].volumeInfo.pageCount != '0'){ 
+        pageNum.textContent+=allBooks.items[i].volumeInfo.pageCount;
+      }else{
+        pageNum.textContent+='unavailable';
+
+      }
 
 
      /*
@@ -66,7 +73,7 @@ function printVolumeInfo(allBooks){
 const getBookInfo = async (query) => {
   try {
     const response = await fetch(
-      `https://www.googleapis.com/books/v1/volumes?q=${query}&key=${secrets.API_KEY}`
+      `https://www.googleapis.com/books/v1/volumes?q=${query}&key=${apiKey}`
     );
 
     if (!response.ok) {
@@ -118,3 +125,21 @@ $(function() {
   });
 });
 
+
+function sendBookInfo(event, element) {
+  event.preventDefault();
+
+  const bookElement = element.closest('.slide-content');
+
+  const title = bookElement.querySelector('.book-title').textContent.trim();
+  const author = bookElement.querySelector('.book-author').textContent.trim();
+  const pageNum = bookElement.querySelector('.book-pageNum').textContent.trim();
+  const imgSrc = bookElement.querySelector('.book-img').src;
+
+  localStorage.setItem('bookTitle', title);
+  localStorage.setItem('bookAuthor', author);
+  localStorage.setItem('bookPageNum', pageNum);
+  localStorage.setItem('bookImgSrc', imgSrc);
+
+  window.location.href = 'bookDescription.html';
+}
