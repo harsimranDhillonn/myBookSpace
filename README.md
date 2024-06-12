@@ -3,14 +3,12 @@ Ongoing project
 
 
 Using 'Google Books API' to search up available book's information.
-"Diary-like website" to leave thoughts on read books.
+"Diary-like website" to leave thoughts on read books. 
 
 Complete:
 - Search functionality
 - Retrieving books from Google Books API
-
-Features to complete:
- - Notes page
+- Notes page, local storage is used to save and retrieve user notes
 
 Credit
 - mobirise: Home page template
