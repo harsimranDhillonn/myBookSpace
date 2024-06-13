@@ -3,9 +3,9 @@ const apiKey="";
 $(document).ready(function() {
   $('#search_value').change(function() {
     const content = $('#search_value').val(); // Get the query entered in the search bar
-    console.log("Content: " + content); // Testing purposes
+    //console.log("Content: " + content); // Testing purposes
 
-    // Redirect to the search.hutml page with the query parameter
+    // Redirect to the search.html page with the query parameter
     window.location.href = `search.html?q=${encodeURIComponent(content)}`;
   });
 
@@ -38,7 +38,7 @@ $(document).ready(function() {
 function printVolumeInfo(allBooks){
     //clearBookDivs();
 
-    //show results for the 1st six books, by default google books return 10
+    //show results for the 1st five books, by default google books return 10
     for(let i=0; i<6; i++){
       const slides = document.getElementsByClassName('embla__slide');
       var bookNum= i+1;

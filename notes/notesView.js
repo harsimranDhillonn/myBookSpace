@@ -19,11 +19,7 @@ export default class notesView {
       this.btnAddNote = this.root.querySelector('.notes__add');
       this.inpTitle = this.root.querySelector('.notes__title');
       this.inpBody = this.root.querySelector('.notes__body');
-
-      console.log('btnAddNote:', this.btnAddNote);
-    console.log('inpTitle:', this.inpTitle);
-    console.log('inpBody:', this.inpBody);
-
+      
       if (!this.btnAddNote) {
           console.error("btnAddnote haven't been found");
           return;
