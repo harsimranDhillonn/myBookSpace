@@ -1,4 +1,4 @@
-
+const apiKey="";
 
 $(document).ready(function() {
   $('#search_value').change(function() {
@@ -141,5 +141,5 @@ function sendBookInfo(event, element) {
   localStorage.setItem('bookPageNum', pageNum);
   localStorage.setItem('bookImgSrc', imgSrc);
 
-  window.location.href = 'bookDescription.html';
+  window.location.href = 'notes.html';
 }

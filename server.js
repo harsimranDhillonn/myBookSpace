@@ -9,7 +9,6 @@ app.use(express.static(__dirname));
 app.get('/main.js', (req, res) => {
   res.sendFile(__dirname + '/main.js');
 });
-
 // Define other routes or middleware here
 
 app.listen(port, () => {
