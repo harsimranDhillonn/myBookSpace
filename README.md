@@ -21,7 +21,7 @@ Complete:
   ```
   git clone https://github.com/harsimranDhillonn/myBookSpace.git
   ```
-2. Navigate to the Project Directory:
+2. Open the terminal in the text editor to run the following commands:
   ```
   cd your-repository
   ```
